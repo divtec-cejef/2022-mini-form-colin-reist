@@ -3,17 +3,29 @@
     box-sizing: border-box;
 }
 
-html {
+body {
     font-family: Arial, sans-serif;
     font-size: 100%;
     font-weight: 400;
     color: #2B2D42;
-    background-color: #EDF2F4   ;
+    background-color: #EDF2F4;
+    background-image: url("../img/backgrounds/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
-body {
-    max-width: 800px;
-    margin: 2rem auto;
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 2px #2B2D42;
+    opacity: 80%;
 }
 
 a {
@@ -44,3 +56,87 @@ button[type="reset"] {
 }
 
 
+/**************** Formulaire ****************/
+
+form {
+    padding: 20px;
+    margin: 2em auto 80px;
+    Background-color: rgba(255,255,255,.8);
+    border: 6px solid #2B2D42;
+    max-width: 450px;
+    min-width: 300px;
+}
+
+form ul {
+    padding: 0;
+    margin: 0;
+}
+
+form li {
+    list-style: none;
+}
+
+label {
+    diplay: block;
+    margin-bottom: .5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+select,
+input[type ="text"],
+input[type ="email"],
+input[type ="password"],
+input[type ="confirmation"] {
+    border: 2px solid #2B2D42;
+    padding: 1em;
+    width: 100%;
+    color: inherit;
+    font-size: inherit;
+    background-color: white;
+}
+
+input[type="email"] :invalid {
+    border-color: red;
+}
+
+input[type="email"]:valid {
+    border-color: #2B2D42;
+}
+
+fieldset {
+    border: 2px solid #2B2D42;
+    padding: 1em;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    font-weigth: 400;
+}
+
+label input + span {
+font-weight: normal;
+}
+
+label input:checked + span  {
+    font-weight: bold;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 .5em;
+}
+
+form li {
+    margin-bottom: 1.5em;
+}
+
+button[type="submit"] {
+    margin-right: 1em;
+}
+button[type="submit"] + a {
+    color: #2B2D42;
+}
