@@ -5,14 +5,25 @@
 
 'use strict';
 
+//Animation du bouton
+const btCreer = document.querySelector('[type="submit"]');
+//Animation du bouton
+
+btCreer.addEventListener('animationend', function () {
+    alert('envoyé');
+    formulaire.reset();
+    btCreer.classList.remove('animate__heartBeat');
+})
+
+
 const formulaire = document.querySelector('form');
 formulaire.addEventListener('submit', function (event) {
     event.preventDefault(); // annule l'envoie du formulaire
-    alert('envoyé');
+    btCreer.classList.add('animate__heartBeat');
 });
 
 const listeBackground = document.getElementById('background');
-formulaire.addEventListener('change', function (event) {
+listeBackground.addEventListener('change', function (event) {
     event.preventDefault(); // annule l'envoie du formulaire
     alert(listeBackground.value);
     document.body.style.backgroundImage = `url(./img/backgrounds/${listeBackground.value})`
